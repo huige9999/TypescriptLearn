@@ -5,6 +5,9 @@ type Props = {
 
 const AddItem = ({ onAddItem }: Props) => {
   const [text, setText] = useState<string>('')
+
+  const isValid = text.trim().length > 0;
+
   const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => { 
     // 注意form提交应该阻止默认事件，不然会刷新页面
     e.preventDefault()
@@ -24,7 +27,7 @@ const AddItem = ({ onAddItem }: Props) => {
           value={text}
           onChange={ handleChange }
         />
-        <button type="submit">添加</button>
+        <button type="submit" disabled={!isValid}>添加</button>
       </form>
     </>
   )
