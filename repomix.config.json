@@ -27,11 +27,13 @@
     }
   },
   "include": [
-    "vite-react/src/components/items",
+    "vite-react/src/components",
+    "vite-react/src/hooks",
+    "vite-react/src/types",
     "vite-react/src/views",
     "vite-react/src/App.tsx",
-    "vite-react/src/hooks",
-    "vite-react/src/types"
+    "vite-react/package.json",
+    "exercise1.md"
   ],
   "ignore": {
     "useGitignore": true,

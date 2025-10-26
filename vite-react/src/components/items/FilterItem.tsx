@@ -11,7 +11,7 @@ const FilterItem = ({ filters, setFilter }: IProps) => {
   return (
     <div>
       {
-        filters.map(filter => <button onClick={() => { handleFilter(filter) }}>{ filter }</button> )
+        filters.map(filter => <button onClick={() => { handleFilter(filter) }} key={filter}>{ filter }</button> )
       }
     </div>
   )
